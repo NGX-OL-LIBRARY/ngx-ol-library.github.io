@@ -1,0 +1,37 @@
+<div><span class="token keyword">import</span> <span class="token punctuation">{</span> AfterViewInit<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> Renderer2<span class="token punctuation">,</span> ViewChild <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defaults as defaultControls <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ol/control'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NolMapComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ngx-ol-library/map'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  selector<span class="token punctuation">:</span> <span class="token string">'nol-attributions-example'</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+    &lt;nol-map [controls]='controls' height='400px'>
+      &lt;nol-view [center]='[0, 0]' [zoom]='2'>&lt;/nol-view>
+      &lt;nol-tile-layer>
+        &lt;nol-osm-source>&lt;/nol-osm-source>
+      &lt;/nol-tile-layer>
+      &lt;nol-attribution-control [collapsible]='collapsible' [collapsed]='collapsed'>&lt;/nol-attribution-control>
+    &lt;/nol-map>
+  `</span></span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NolAttributionsExampleComponent</span> <span class="token keyword">implements</span> <span class="token class-name">AfterViewInit</span> <span class="token punctuation">{</span>
+
+  controls <span class="token operator">=</span> <span class="token function">defaultControls</span><span class="token punctuation">(</span><span class="token punctuation">{</span> attribution<span class="token punctuation">:</span> <span class="token keyword">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  collapsible <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+  collapsed <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+
+  @<span class="token function">ViewChild</span><span class="token punctuation">(</span>NolMapComponent<span class="token punctuation">)</span> map<span class="token punctuation">:</span> NolMapComponent <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token keyword">protected</span> renderer<span class="token punctuation">:</span> Renderer2<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token function">ngAfterViewInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>renderer<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token string">'window'</span><span class="token punctuation">,</span> <span class="token string">'resize'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>event<span class="token punctuation">:</span> Event<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> size <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">getSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> width <span class="token operator">=</span> size <span class="token operator">?</span> size<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>target as Window<span class="token punctuation">)</span><span class="token punctuation">.</span>innerHeight<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>collapsed <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>collapsible <span class="token operator">=</span> width <span class="token operator">&lt;</span> <span class="token number">600</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span></div>

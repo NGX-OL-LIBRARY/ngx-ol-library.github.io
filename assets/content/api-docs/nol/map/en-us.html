@@ -1,0 +1,467 @@
+  <div class="dg-api-header">
+     <span class="name">nol-map</span>
+     <label class="type-label dg-label component">component</label>
+  </div>
+  <table class="dg-api-properties-table">
+    <thead>
+      <tr class="dg-api-properties-header-row">
+        <th class="dg-api-properties-name-th">Name</th>
+        <th class="dg-api-properties-type-th">Type</th>
+        <th class="dg-api-properties-default-th">Default</th>
+        <th class="dg-api-properties-description-th">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [controls]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">	Collection&lt;Control&gt; | Array&lt;Control&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Controls initially added to the map. If not specified, <a target="_blank" href="https://openlayers.org/en/latest/apidoc/module-ol_control_defaults.html#.defaults">defaults</a> is used.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [pixelRatio]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">window.devicePixelRatio</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The ratio between physical pixels and device-independent pixels (dips) on the device.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [interactions]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">Collection&lt;Interaction&gt; | Array&lt;Interaction&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Interactions that are initially added to the map. If not specified, <a target="_blank" href="https://openlayers.org/en/latest/apidoc/module-ol_interaction_defaults.html#.defaults">defaults</a> is used.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [keyboardEventTarget]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">HTMLElement | Document | string</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The element to listen to keyboard events on. This determines when the <code>KeyboardPan</code> and <code>KeyboardZoom</code> interactions trigger. For example, if this option is set to <code>document</code> the keyboard interactions will always trigger. If this option is not specified, the element the library listens to keyboard events on is the map target (i.e. the user-provided div for the map). If this is not <code>document</code>, the target element needs to be focused for key events to be emitted, requiring that the target element has a <code>tabindex</code> attribute.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [layers]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">Array&lt;BaseLayer&gt; | Collection&lt;BaseLayer&gt; | LayerGroup</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Layers. If this is not defined, a map with no layers will be rendered. Note that layers are rendered in the order supplied, so if you want, for example, a vector layer to appear on top of a tile layer, it must come after the tile layer.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [maxTilesLoading]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">16</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Maximum number tiles to load simultaneously.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [moveTolerance]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">1</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The minimum distance in pixels the cursor must move to be detected as a map move event instead of a click. Increasing this value can make it easier to click on the map.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [overlays]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">Collection&lt;Overlay&gt; | Array&lt;Overlay&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Overlays initially added to the map. By default, no overlays are added.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [target]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">HTMLElement | string</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The container for the map, either the element itself or the id of the element. If not specified at construction time, <a target="_blank" href="https://openlayers.org/en/latest/apidoc/module-ol_Map-Map.html#setTarget">setTarget</a> must be called for the map to be rendered. If passed by element, the container can be in a secondary document.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [view]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">View | Promise&lt;ViewOptions&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The map&#39;s view. No layer sources will be fetched unless this is specified at construction time or through <a target="_blank" href="https://openlayers.org/en/latest/apidoc/module-ol_Map-Map.html#setView">setView</a>.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onChange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;BaseEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Generic change event. Triggered when the revision counter is increased.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onLayerGroupChange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;ObjectEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when layer group changed.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onSizeChange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;ObjectEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when map size changed.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onTargetChange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;ObjectEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when map target element changed.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onViewChange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;ObjectEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when map view changed.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onClick)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;MapBrowserEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>A click with no dragging. A double click will fire two of this.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onDblclick)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;MapBrowserEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>A true double click, with no dragging.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onError)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;BaseEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Generic error event. Triggered when an error occurs.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onLoadend)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;MapEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when loading of additional map data has completed.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onLoadstart)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;MapEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when loading of additional map data (tiles, images, features) starts.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onMoveend)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;MapEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered after the map is moved.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onMovestart)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;MapEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when the map starts moving.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onPointerdrag)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;MapBrowserEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when a pointer is dragged.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onPointermove)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;MapBrowserEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when a pointer is moved. Note that on touch devices this is triggered when the map is panned, so is not the same as mousemove.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onPostcompose)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;RenderEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered after layers are composed. When dispatched by the map, the event object will not have a context set. When dispatched by a layer, the event object will have a context set. Only WebGL layers currently dispatch this event.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onPostrender)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;MapEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered after a map frame is rendered.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onPrecompose)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;RenderEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered before layers are composed. When dispatched by the map, the event object will not have a context set. When dispatched by a layer, the event object will have a context set. Only WebGL layers currently dispatch this event.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onPropertychange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;ObjectEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when a property is changed.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onRendercomplete)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;RenderEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when rendering is complete, i.e. all sources and tiles have finished loading for the current viewport, and all tiles are faded in. The event object will not have a context set.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onSingleclick)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;MapBrowserEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>A true single click with no dragging and no double click. Note that this event is delayed by 250 ms to ensure that it is not a double click.</p>
+</p>
+         </td>
+      </tr>
+    </tbody>
+  </table>

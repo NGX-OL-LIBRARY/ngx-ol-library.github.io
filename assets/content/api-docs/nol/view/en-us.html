@@ -1,0 +1,437 @@
+  <div class="dg-api-header">
+     <span class="name">nol-view</span>
+     <label class="type-label dg-label component">component</label>
+  </div>
+  <table class="dg-api-properties-table">
+    <thead>
+      <tr class="dg-api-properties-header-row">
+        <th class="dg-api-properties-name-th">Name</th>
+        <th class="dg-api-properties-type-th">Type</th>
+        <th class="dg-api-properties-default-th">Default</th>
+        <th class="dg-api-properties-description-th">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [center]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">Coordinate</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The initial center for the view. If a user projection is not set, the coordinate system for the center is specified with the <code>projection</code> option. Layer sources will not be fetched if this is not set, but the center can be set later.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [constrainRotation]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">boolean | number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">true</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Rotation constraint. <code>false</code> means no constraint. <code>true</code> means no constraint, but snap to zero near zero. A number constrains the rotation to that number of values. For example, <code>4</code> will constrain the rotation to 0, 90, 180, and 270 degrees.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [enableRotation]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">boolean</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">true</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Enable rotation. If <code>false</code>, a rotation constraint that always sets the rotation to zero is used. The <code>constrainRotation</code> option has no effect if <code>enableRotation</code> is <code>false</code>.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [extent]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">Extent</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The extent that constrains the view, in other words, nothing outside of this extent can be visible on the map.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [constrainOnlyCenter]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">boolean</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>If true, the extent constraint will only apply to the view center and not the whole extent.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [smoothExtentConstraint]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">boolean</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">true</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>If true, the extent constraint will be applied smoothly, i.e. allow the view to go slightly outside of the given <code>extent</code>.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [maxResolution]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The maximum resolution used to determine the resolution constraint. It is used together with <code>minResolution</code> (or <code>maxZoom</code>) and <code>zoomFactor</code>. If unspecified it is calculated in such a way that the projection&#39;s validity extent fits in a <code>256x256</code> px tile. If the projection is Spherical <code>Mercator</code> (the default) then <code>maxResolution</code> defaults to <code>40075016.68557849 / 256 = 156543.03392804097</code>.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [minResolution]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The minimum resolution used to determine the resolution constraint. It is used together with <code>maxResolution</code> (or <code>minZoom</code>) and <code>zoomFactor</code>. If unspecified it is calculated assuming 29 zoom levels (with a factor of 2). If the projection is Spherical <code>Mercator</code> (the default) then <code>minResolution</code> defaults to <code>40075016.68557849 / 256 / Math.pow(2, 28) = 0.0005831682455839253</code>.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [maxZoom]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">28</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The maximum zoom level used to determine the resolution constraint. It is used together with <code>minZoom</code> (or <code>maxResolution</code>) and <code>zoomFactor</code>. Note that if <code>minResolution</code> is also provided, it is given precedence over <code>maxZoom</code>.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [minZoom]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The minimum zoom level used to determine the resolution constraint. It is used together with <code>maxZoom</code> (or <code>minResolution</code>) and <code>zoomFactor</code>. Note that if <code>maxResolution</code> is also provided, it is given precedence over <code>minZoom</code>.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [multiWorld]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">boolean</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>If <code>false</code> the view is constrained so only one world is visible, and you cannot pan off the edge. If <code>true</code> the map may show multiple worlds at low zoom levels. Only used if the <code>projection</code> is global. Note that if <code>extent</code> is also provided it is given precedence.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [constrainResolution]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">boolean</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>If true, the view will always animate to the closest zoom level after an interaction; false means intermediary zoom levels are allowed.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [smoothResolutionConstraint]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">boolean</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">true</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>If true, the resolution min/max values will be applied smoothly, i. e. allow the view to exceed slightly the given resolution or zoom bounds.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [showFullExtent]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">boolean</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Allow the view to be zoomed out to show the full configured extent. By default, when a view is configured with an extent, users will not be able to zoom out so the viewport exceeds the extent in either dimension. This means the full extent may not be visible if the viewport is taller or wider than the aspect ratio of the configured extent. If showFullExtent is true, the user will be able to zoom out so that the viewport exceeds the height or width of the configured extent, but not both, allowing the full extent to be shown.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [projection]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">ProjectionLike</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">EPSG:3857</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The projection. The default is Spherical Mercator.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [resolution]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The initial resolution for the view. The units are <code>projection</code> units per pixel (e.g. meters per pixel). An alternative to setting this is to set <code>zoom</code>. Layer sources will not be fetched if neither this nor <code>zoom</code> are defined, but they can be set later with update <code>zoom</code> or <code>resolution</code> properties.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [resolutions]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">Array.&lt;number&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Resolutions that determine the zoom levels if specified. The index in the array corresponds to the zoom level, therefore the resolution values have to be in descending order. It also constrains the resolution by the minimum and maximum value. If set the <code>maxResolution</code>, <code>minResolution</code>, <code>minZoom</code>, <code>maxZoom</code>, and <code>zoomFactor</code> options are ignored.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [rotation]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The initial rotation for the view in radians (positive rotation clockwise, 0 means North).</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [zoom]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Only used if <code>resolution</code> is not defined. Zoom level used to calculate the initial resolution for the view.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [zoomFactor]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">number</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">2</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>The zoom factor used to compute the corresponding resolution.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [padding]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">Array.&lt;number&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default">[0, 0, 0, 0]</label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Padding (in css pixels). If the map viewport is partially covered with other content (overlays) along its edges, this setting allows to shift the center of the viewport away from that content. The order of the values is top, right, bottom, left.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          [enableChangesAnimation]
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">boolean</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>If true, the view&#39;s <code>center</code>, <code>zoom</code> (or <code>resolution</code>), and <code>rotation</code> can be animated for smooth transitions between view states.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onChange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;BaseEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Generic change event. Triggered when the revision counter is increased.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onCenterChange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;ObjectEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when the <code>center</code> of the view state is changed.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onResolutionChange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;ObjectEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when the <code>resolution</code> of the view state is changed.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onRotationChange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;ObjectEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when the <code>rotation</code> of the view state is changed.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onError)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;BaseEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Generic error event. Triggered when an error occurs.</p>
+</p>
+         </td>
+      </tr>
+      <tr class="dg-api-properties-row">
+         <td class="dg-api-properties-name-cell">
+          (onPropertyChange)
+         </td>
+         <td class="dg-api-properties-type-cell">
+             <label class="dg-label dg-label-outline-info">EventEmitter&lt;ObjectEvent&gt;</label>
+         </td>
+         <td class="dg-api-properties-default-cell">
+           <label class="dg-label dg-label-default"></label>
+         </td>
+         <td class="dg-api-property-description">
+           <p><p>Triggered when a property is changed.</p>
+</p>
+         </td>
+      </tr>
+    </tbody>
+  </table>

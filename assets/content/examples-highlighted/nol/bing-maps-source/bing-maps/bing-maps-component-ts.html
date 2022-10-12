@@ -1,0 +1,35 @@
+<div><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnInit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@angular/core"</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  selector<span class="token punctuation">:</span> <span class="token string">'nol-bing-maps-example'</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+    &lt;select [(ngModel)]="selected">
+      &lt;option *ngFor="let style of styles" [value]="style.value">{{ style.label }}&lt;/option>
+    &lt;/select>
+    
+    &lt;nol-map height="500px">
+      &lt;nol-view [center]="[0, 0]" [zoom]="2">&lt;/nol-view>
+      &lt;ng-container *ngFor="let style of styles">
+        &lt;nol-tile-layer [visible]="style.value === selected">
+          &lt;nol-bing-maps-source [key]="key" [imagerySet]="style.value">&lt;/nol-bing-maps-source>
+        &lt;/nol-tile-layer>
+      &lt;/ng-container>
+    &lt;/nol-map>
+  `</span></span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NolBingMapsExampleComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+
+  key <span class="token operator">=</span> <span class="token string">'ApnZqi0Y-RQjo6Kv-Gmoz517qAzexzpOcBcZNY5yNUcuqNFdDnqyNzM_k5VtBinx'</span><span class="token punctuation">;</span>
+  styles <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token string">'RoadOnDemand'</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token string">'Road'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token string">'Aerial'</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token string">'Aerial'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token string">'AerialWithLabelsOnDemand'</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token string">'Aerial with labels'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token string">'CanvasDark'</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token string">'Road dark'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> value<span class="token punctuation">:</span> <span class="token string">'OrdnanceSurvey'</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token string">'Ordnance Survey'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+  selected <span class="token operator">=</span> <span class="token string">'Aerial'</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div>

@@ -1,0 +1,48 @@
+<div><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> ViewEncapsulation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@angular/core"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NolMapComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"ngx-ol-library/map"</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  selector<span class="token punctuation">:</span> <span class="token string">'nol-accessible-map-example'</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+    &lt;nol-map #map [targetAttributes]="{ tabindex: 0 }" height="400px">
+      &lt;nol-view [center]="[0, 0]" [zoom]="2">&lt;/nol-view>
+      &lt;nol-tile-layer>
+        &lt;nol-osm-source>&lt;/nol-osm-source>
+      &lt;/nol-tile-layer>
+      &lt;div class="actions">
+        &lt;button type="button" (click)="zoomOut(map)">Zoom out&lt;/button>
+        &lt;button type="button" (click)="zoomIn(map)">Zoom in&lt;/button>
+      &lt;/div>
+    &lt;/nol-map>
+  `</span></span><span class="token punctuation">,</span>
+  styles<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token template-string"><span class="token string">`
+    nol-map > div[tabindex="0"]:focus {
+      outline: #4A74A8 solid 0.15em;
+    }
+
+    div.actions {
+      margin-top: 16px;
+    }
+
+    div.actions > button {
+      padding: 8px 16px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+  `</span></span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  encapsulation<span class="token punctuation">:</span> ViewEncapsulation<span class="token punctuation">.</span>None
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NolAccessibleMapExampleComponent</span> <span class="token punctuation">{</span>
+
+  <span class="token function">zoomOut</span><span class="token punctuation">(</span>map<span class="token punctuation">:</span> NolMapComponent<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> view <span class="token operator">=</span> map<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">getView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> zoom <span class="token operator">=</span> view<span class="token punctuation">.</span><span class="token function">getZoom</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">;</span>
+    view<span class="token punctuation">.</span><span class="token function">setZoom</span><span class="token punctuation">(</span>zoom <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">zoomIn</span><span class="token punctuation">(</span>map<span class="token punctuation">:</span> NolMapComponent<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> view <span class="token operator">=</span> map<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">getView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> zoom <span class="token operator">=</span> view<span class="token punctuation">.</span><span class="token function">getZoom</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">;</span>
+    view<span class="token punctuation">.</span><span class="token function">setZoom</span><span class="token punctuation">(</span>zoom <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div>

@@ -1,0 +1,31 @@
+
+        <h2 id="definition" class="docs-header-link">
+          <span header-link="definition"></span>
+          Definition
+        </h2>
+      <blockquote>
+<p>The map is the core component of OpenLayers.</p>
+</blockquote>
+
+        <h2 id="when-to-use" class="docs-header-link">
+          <span header-link="when-to-use"></span>
+          When To Use
+        </h2>
+      <p>Display a map in the application.</p>
+
+        <h2 id="import-module" class="docs-header-link">
+          <span header-link="import-module"></span>
+          Import Module
+        </h2>
+      <pre><code><div>import { NolMapModule } from <span class="token string">'ngx-ol-library/map'</span><span class="token comment" spellcheck="true">;</span></div></code></pre>
+        <h2 id="how-to-use" class="docs-header-link">
+          <span header-link="how-to-use"></span>
+          How To Use
+        </h2>
+      <p>For a map to render, a view, one or more layers, and a target container are needed:</p>
+<pre><code><div><span class="token operator">&lt;</span>nol<span class="token operator">-</span>map height<span class="token operator">=</span><span class="token string">"400px"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>nol<span class="token operator">-</span>view <span class="token punctuation">[</span>center<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"[0, 0]"</span> <span class="token punctuation">[</span>zoom<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"2"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nol<span class="token operator">-</span>view<span class="token operator">></span>
+  <span class="token operator">&lt;</span>nol<span class="token operator">-</span>tile<span class="token operator">-</span>layer<span class="token operator">></span>
+    <span class="token operator">&lt;</span>nol<span class="token operator">-</span>osm<span class="token operator">-</span>source<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nol<span class="token operator">-</span>osm<span class="token operator">-</span>source<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>nol<span class="token operator">-</span>tile<span class="token operator">-</span>layer<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>nol<span class="token operator">-</span>map<span class="token operator">></span></div></code></pre><p>The above snippet creates a map using a <a href="/en-us/components/tile-layer">nol-tile-layer</a> component to display <a href="/en-us/components/osm-source">OSM</a> data and render it.</p>

@@ -1,0 +1,146 @@
+<div><span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> MapBrowserEvent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ol'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Coordinate <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ol/coordinate'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  selector<span class="token punctuation">:</span> <span class="token string">'nol-overlay-example'</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span>  <span class="token template-string"><span class="token string">`
+    &lt;nol-map height="500px" (onClick)="onClickMap($event)">
+      &lt;nol-view [center]='[0, 0]' [zoom]='2'>&lt;/nol-view>
+      &lt;nol-tile-layer>
+        &lt;nol-osm-source>&lt;/nol-osm-source>
+      &lt;/nol-tile-layer>
+      &lt;!-- Popup showing the position the user clicked -->
+      &lt;nol-overlay
+        *ngIf="clickPosition"
+        [position]="clickPosition"
+        [positioning]="'bottom-center'"
+      >
+        &lt;ng-container *nolOverlayContent>
+          &lt;div class="popover">
+            &lt;div class="popover-arrow">&lt;/div>
+            &lt;h3 class="popover-header">Welcome to OpenLayers&lt;/h3>
+            &lt;div class="popover-body">
+              &lt;p>The location you clicked was:&lt;/p>
+              &lt;code>{{ clickPosition | nolToStringHDMS }}&lt;/code>
+            &lt;/div>
+          &lt;/div>
+        &lt;/ng-container>
+      &lt;/nol-overlay>
+      &lt;!-- Vienna marker -->
+      &lt;nol-overlay
+        [position]="[16.3725, 48.208889] | nolFromLonLat"
+        positioning="center-center"
+        [stopEvent]="false"
+      >
+        &lt;ng-container *nolOverlayContent>
+          &lt;div class="vienna-marker">&lt;/div>
+        &lt;/ng-container>
+      &lt;/nol-overlay>
+      &lt;!-- Vienna label -->
+      &lt;nol-overlay [position]="[16.3725, 48.208889] | nolFromLonLat">
+        &lt;ng-container *nolOverlayContent>
+          &lt;a class="vienna-label" href="https://en.wikipedia.org/wiki/Vienna" target="_blank">Vienna&lt;/a>
+        &lt;/ng-container>
+      &lt;/nol-overlay>
+    &lt;/nol-map>
+  `</span></span><span class="token punctuation">,</span>
+  styles<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token template-string"><span class="token string">`
+    .popover {
+      position: relative;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid rgba(0, 0, 0, 0.175);
+      border-radius: 0.5rem;
+      max-width: 276px;
+      transform: translateY(-8px);
+    }
+
+    .popover-arrow {
+      position: absolute;
+      transform: translate(129px, 0px);
+      left: 0px;
+      bottom: calc(0.5rem * -1 - 1px);
+      display: block;
+      width: 1rem;
+      height: 0.5rem;
+      transform: translate(129px, 0px);
+    }
+
+    .popover-arrow::before,
+    .popover-arrow::after {
+      position: absolute;
+      display: block;
+      content: "";
+      border-color: transparent;
+      border-style: solid;
+      border-width: 0.5rem calc(1rem * .5) 0;
+    }
+
+    .popover-arrow::before {
+      bottom: 0;
+      border-top-color: rgba(0, 0, 0, 0.175);
+    }
+
+    .popover-arrow::after {
+      bottom: 1px;
+      border-top-color: #fff;
+    }
+
+
+    .popover-header {
+      padding: 0.5rem 1rem;
+      margin: 0;
+      font-size: 1rem;
+      color: rgba(0, 0, 0, .85);
+      background-color: #f0f0f0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+      border-top-left-radius: calc(0.5rem - 1px);
+      border-top-right-radius: calc(0.5rem - 1px);
+    }
+
+    .popover-body {
+      min-width: 276px;
+      padding: 1rem 1rem;
+      color: #212529;
+    }
+
+    .popover-body > p {
+      margin-bottom: 1rem;
+    }
+
+    .popover-body > code {
+      color: #333333;
+      background-color: #F5F5F5;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: .875em;
+    }
+
+    .vienna-marker {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #088;
+      border-radius: 10px;
+      background-color: #0FF;
+      opacity: 0.5;
+      box-sizing: border-box;
+    }
+
+    .vienna-label {
+      text-decoration: none;
+      color: white;
+      font-size: 11pt;
+      font-weight: bold;
+      text-shadow: black 0.1em 0.1em 0.2em;
+    }
+  `</span></span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NolOverlayExampleComponent</span> <span class="token punctuation">{</span>
+
+  clickPosition<span class="token operator">?</span><span class="token punctuation">:</span> Coordinate<span class="token punctuation">;</span>
+
+  <span class="token function">onClickMap</span><span class="token punctuation">(</span>event<span class="token punctuation">:</span> MapBrowserEvent<span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>clickPosition <span class="token operator">=</span> event<span class="token punctuation">.</span>coordinate<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div>

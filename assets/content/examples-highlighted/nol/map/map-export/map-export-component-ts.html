@@ -1,0 +1,77 @@
+<div><span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> OnInit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@angular/core"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NolMapComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"ngx-ol-library/map"</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  selector<span class="token punctuation">:</span> <span class="token string">'nol-map-export-example'</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+    &lt;button type="button" (click)="download(map)">Download PNG&lt;/button>
+    &lt;nol-map #map height="400px">
+      &lt;nol-view [center]="[0, 0]" [zoom]="2">&lt;/nol-view>
+      &lt;nol-tile-layer>
+        &lt;nol-osm-source>&lt;/nol-osm-source>
+      &lt;/nol-tile-layer>
+    &lt;/nol-map>
+  `</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NolMapExportExample</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+  <span class="token function">download</span><span class="token punctuation">(</span>map<span class="token punctuation">:</span> NolMapComponent<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    map<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">once</span><span class="token punctuation">(</span><span class="token string">'rendercomplete'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> canvasList <span class="token operator">=</span> map<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">getViewport</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>querySelectorAll<span class="token operator">&lt;</span>HTMLCanvasElement<span class="token operator">></span><span class="token punctuation">(</span><span class="token string">'.ol-layer canvas, canvas.ol-layer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> canvas <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'canvas'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> ctx <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">;</span>
+      <span class="token keyword">const</span> <span class="token punctuation">[</span>width<span class="token punctuation">,</span> height<span class="token punctuation">]</span> <span class="token operator">=</span> map<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">getSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">;</span>
+      canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> width<span class="token punctuation">;</span>
+      canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> height<span class="token punctuation">;</span>
+  
+      canvasList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>canvasElement <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>canvasElement<span class="token punctuation">.</span>width <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> opacity <span class="token operator">=</span> canvasElement<span class="token punctuation">.</span>parentElement<span class="token operator">?</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>opacity <span class="token operator">||</span> canvasElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>opacity<span class="token punctuation">;</span>
+          ctx<span class="token punctuation">.</span>globalAlpha <span class="token operator">=</span> opacity <span class="token operator">===</span> <span class="token string">''</span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token punctuation">:</span> <span class="token function">Number</span><span class="token punctuation">(</span>opacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">let</span> matrix<span class="token punctuation">:</span> <span class="token keyword">any</span><span class="token punctuation">;</span>
+          <span class="token keyword">const</span> transform <span class="token operator">=</span> canvasElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform<span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>transform<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// Get the transform parameters from the style's transform matrix</span>
+            matrix <span class="token operator">=</span> transform
+              <span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/^matrix\(([^\(]*)\)$/</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+              <span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span>
+              <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>Number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            matrix <span class="token operator">=</span> <span class="token punctuation">[</span>
+              <span class="token function">parseFloat</span><span class="token punctuation">(</span>canvasElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width<span class="token punctuation">)</span> <span class="token operator">/</span> canvasElement<span class="token punctuation">.</span>width<span class="token punctuation">,</span>
+              <span class="token number">0</span><span class="token punctuation">,</span>
+              <span class="token number">0</span><span class="token punctuation">,</span>
+              <span class="token function">parseFloat</span><span class="token punctuation">(</span>canvasElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>height<span class="token punctuation">)</span> <span class="token operator">/</span> canvasElement<span class="token punctuation">.</span>height<span class="token punctuation">,</span>
+              <span class="token number">0</span><span class="token punctuation">,</span>
+              <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token comment" spellcheck="true">// Apply the transform to the export map context</span>
+          ctx<span class="token punctuation">.</span><span class="token function">setTransform</span><span class="token punctuation">(</span>matrix<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">const</span> backgroundColor <span class="token operator">=</span> canvasElement<span class="token punctuation">.</span>parentElement<span class="token operator">?</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor<span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>backgroundColor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> backgroundColor<span class="token punctuation">;</span>
+            ctx<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> canvasElement<span class="token punctuation">.</span>width<span class="token punctuation">,</span> canvasElement<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          ctx<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>canvasElement<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+      ctx<span class="token punctuation">.</span>globalAlpha <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      ctx<span class="token punctuation">.</span><span class="token function">setTransform</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+      <span class="token keyword">const</span> link <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>link<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      link<span class="token punctuation">.</span>href <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">toDataURL</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      link<span class="token punctuation">.</span>download <span class="token operator">=</span> <span class="token string">'map_export.png'</span><span class="token punctuation">;</span>
+      link<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      link<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">renderSync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div>

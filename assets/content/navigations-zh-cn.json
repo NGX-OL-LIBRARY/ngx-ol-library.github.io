@@ -1,0 +1,2928 @@
+{
+  "navs": [
+    {
+      "id": "guides",
+      "path": "guides",
+      "channelPath": "guides",
+      "title": "指南",
+      "items": [
+        {
+          "id": "guides/intro",
+          "path": "guides/intro",
+          "channelPath": "guides",
+          "title": "介绍",
+          "items": [],
+          "order": 10
+        }
+      ],
+      "order": 20
+    },
+    {
+      "title": "组件",
+      "path": "components",
+      "lib": "nol",
+      "items": [
+        {
+          "id": "general",
+          "title": "通用",
+          "items": [
+            {
+              "id": "map",
+              "title": "地图",
+              "subtitle": "Map",
+              "path": "map",
+              "importSpecifier": "nol/map",
+              "examples": [
+                "nol-map-accessible-map-example",
+                "nol-map-simple-map-example",
+                "nol-map-map-export-example"
+              ],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "general",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/map/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "view",
+              "title": "视图",
+              "subtitle": "View",
+              "path": "view",
+              "importSpecifier": "nol/view",
+              "examples": [
+                "nol-view-min-zoom-example"
+              ],
+              "overview": true,
+              "api": false,
+              "order": 2,
+              "category": "general",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/view/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "coordinate",
+              "title": "坐标",
+              "subtitle": "Coordinate",
+              "path": "coordinate",
+              "importSpecifier": "nol/coordinate",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 3,
+              "category": "general",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/coordinate/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "proj",
+              "title": "投影",
+              "subtitle": "Projection",
+              "path": "proj",
+              "importSpecifier": "nol/proj",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 4,
+              "category": "general",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/proj/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            }
+          ]
+        },
+        {
+          "id": "layers",
+          "title": "图层",
+          "items": [
+            {
+              "id": "graticule-layer",
+              "title": "标线层",
+              "subtitle": "GraticuleLayer",
+              "path": "graticule-layer",
+              "importSpecifier": "nol/graticule-layer",
+              "examples": [
+                "nol-graticule-layer-map-graticule-example"
+              ],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layers",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/layers/graticule-layer/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "heatmap-layer",
+              "title": "热力图",
+              "subtitle": "HeatmapLayer",
+              "path": "heatmap-layer",
+              "importSpecifier": "nol/heatmap-layer",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layers",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/layers/heatmap-layer/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "image-layer",
+              "title": "图像层",
+              "subtitle": "ImageLayer",
+              "path": "image-layer",
+              "importSpecifier": "nol/image-layer",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layers",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/layers/image-layer/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "layer-group",
+              "title": "图层组",
+              "subtitle": "LayerGroup",
+              "path": "layer-group",
+              "importSpecifier": "nol/layer-group",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layers",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/layers/layer-group/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "mapbox-vector-layer",
+              "title": "Mapbox 矢量瓦片层",
+              "subtitle": "MapboxVectorLayer",
+              "path": "mapbox-vector-layer",
+              "importSpecifier": "nol/mapbox-vector-layer",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layers",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/layers/mapbox-vector-layer/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "tile-layer",
+              "title": "瓦片层",
+              "subtitle": "TileLayer",
+              "path": "tile-layer",
+              "importSpecifier": "nol/tile-layer",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layers",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/layers/tile-layer/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "vector-image-layer",
+              "title": "矢量图像层",
+              "subtitle": "VectorImageLayer",
+              "path": "vector-image-layer",
+              "importSpecifier": "nol/vector-image-layer",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layers",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/layers/vector-image-layer/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "vector-layer",
+              "title": "矢量层",
+              "subtitle": "VectorLayer",
+              "path": "vector-layer",
+              "importSpecifier": "nol/vector-layer",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layers",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/layers/vector-layer/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "vector-tile-layer",
+              "title": "矢量瓦片层",
+              "subtitle": "VectorTileLayer",
+              "path": "vector-tile-layer",
+              "importSpecifier": "nol/vector-tile-layer",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layers",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/layers/vector-tile-layer/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "webgl-tile-layer",
+              "title": "WebGL 瓦片层",
+              "subtitle": "WebGLTileLayer",
+              "path": "webgl-tile-layer",
+              "importSpecifier": "nol/webgl-tile-layer",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "layers",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/layers/webgl-tile-layer/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            }
+          ]
+        },
+        {
+          "id": "controls",
+          "title": "控件",
+          "items": [
+            {
+              "id": "attribution-control",
+              "title": "属性",
+              "subtitle": "Attribution",
+              "path": "attribution-control",
+              "importSpecifier": "nol/attribution-control",
+              "examples": [
+                "nol-attribution-control-attributions-example"
+              ],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "controls",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/controls/attribution-control/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "full-screen-control",
+              "title": "FullScreenControl",
+              "subtitle": "",
+              "path": "full-screen-control",
+              "importSpecifier": "nol/full-screen-control",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "controls",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/controls/full-screen-control/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "mouse-position-control",
+              "title": "MousePositionControl",
+              "subtitle": "",
+              "path": "mouse-position-control",
+              "importSpecifier": "nol/mouse-position-control",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "controls",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/controls/mouse-position-control/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "overview-map-control",
+              "title": "OverviewMapControl",
+              "subtitle": "",
+              "path": "overview-map-control",
+              "importSpecifier": "nol/overview-map-control",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "controls",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/controls/overview-map-control/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "rotate-control",
+              "title": "RotateControl",
+              "subtitle": "",
+              "path": "rotate-control",
+              "importSpecifier": "nol/rotate-control",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "controls",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/controls/rotate-control/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "scale-line-control",
+              "title": "ScaleLineControl",
+              "subtitle": "",
+              "path": "scale-line-control",
+              "importSpecifier": "nol/scale-line-control",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "controls",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/controls/scale-line-control/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "zoom-control",
+              "title": "ZoomControl",
+              "subtitle": "",
+              "path": "zoom-control",
+              "importSpecifier": "nol/zoom-control",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "controls",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/controls/zoom-control/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "zoom-slider-control",
+              "title": "ZoomSliderControl",
+              "subtitle": "",
+              "path": "zoom-slider-control",
+              "importSpecifier": "nol/zoom-slider-control",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "controls",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/controls/zoom-slider-control/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "zoom-to-extent-control",
+              "title": "ZoomToExtentControl",
+              "subtitle": "",
+              "path": "zoom-to-extent-control",
+              "importSpecifier": "nol/zoom-to-extent-control",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "controls",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/controls/zoom-to-extent-control/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            }
+          ]
+        },
+        {
+          "id": "interactions",
+          "title": "互动",
+          "items": [
+            {
+              "id": "double-click-zoom-interaction",
+              "title": "DoubleClickZoomInteraction",
+              "subtitle": "",
+              "path": "double-click-zoom-interaction",
+              "importSpecifier": "nol/double-click-zoom-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/double-click-zoom-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "drag-and-drop-interaction",
+              "title": "DragAndDropInteraction",
+              "subtitle": "",
+              "path": "drag-and-drop-interaction",
+              "importSpecifier": "nol/drag-and-drop-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/drag-and-drop-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "drag-box-interaction",
+              "title": "DragBoxInteraction",
+              "subtitle": "",
+              "path": "drag-box-interaction",
+              "importSpecifier": "nol/drag-box-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/drag-box-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "drag-pan-interaction",
+              "title": "DragPanInteraction",
+              "subtitle": "",
+              "path": "drag-pan-interaction",
+              "importSpecifier": "nol/drag-pan-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/drag-pan-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "drag-rotate-and-zoom-interaction",
+              "title": "DragRotateAndZoomInteraction",
+              "subtitle": "",
+              "path": "drag-rotate-and-zoom-interaction",
+              "importSpecifier": "nol/drag-rotate-and-zoom-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/drag-rotate-and-zoom-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "drag-rotate-interaction",
+              "title": "DragRotateInteraction",
+              "subtitle": "",
+              "path": "drag-rotate-interaction",
+              "importSpecifier": "nol/drag-rotate-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/drag-rotate-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "drag-zoom-interaction",
+              "title": "DragZoomInteraction",
+              "subtitle": "",
+              "path": "drag-zoom-interaction",
+              "importSpecifier": "nol/drag-zoom-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/drag-zoom-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "draw-interaction",
+              "title": "DrawInteraction",
+              "subtitle": "",
+              "path": "draw-interaction",
+              "importSpecifier": "nol/draw-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/draw-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "extent-interaction",
+              "title": "ExtentInteraction",
+              "subtitle": "",
+              "path": "extent-interaction",
+              "importSpecifier": "nol/extent-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/extent-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "keyboard-pan-interaction",
+              "title": "KeyboardPanInteraction",
+              "subtitle": "",
+              "path": "keyboard-pan-interaction",
+              "importSpecifier": "nol/keyboard-pan-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/keyboard-pan-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "keyboard-zoom-interaction",
+              "title": "KeyboardZoomInteraction",
+              "subtitle": "",
+              "path": "keyboard-zoom-interaction",
+              "importSpecifier": "nol/keyboard-zoom-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/keyboard-zoom-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "link-interaction",
+              "title": "LinkInteraction",
+              "subtitle": "",
+              "path": "link-interaction",
+              "importSpecifier": "nol/link-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/link-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "modify-interaction",
+              "title": "ModifyInteraction",
+              "subtitle": "",
+              "path": "modify-interaction",
+              "importSpecifier": "nol/modify-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/modify-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "mouse-wheel-zoom-interaction",
+              "title": "MouseWheelZoomInteraction",
+              "subtitle": "",
+              "path": "mouse-wheel-zoom-interaction",
+              "importSpecifier": "nol/mouse-wheel-zoom-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/mouse-wheel-zoom-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "pinch-rotate-interaction",
+              "title": "PinchRotateInteraction",
+              "subtitle": "",
+              "path": "pinch-rotate-interaction",
+              "importSpecifier": "nol/pinch-rotate-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/pinch-rotate-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "pinch-zoom-interaction",
+              "title": "PinchZoomInteraction",
+              "subtitle": "",
+              "path": "pinch-zoom-interaction",
+              "importSpecifier": "nol/pinch-zoom-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/pinch-zoom-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "select-interaction",
+              "title": "SelectInteraction",
+              "subtitle": "",
+              "path": "select-interaction",
+              "importSpecifier": "nol/select-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/select-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "snap-interaction",
+              "title": "SnapInteraction",
+              "subtitle": "",
+              "path": "snap-interaction",
+              "importSpecifier": "nol/snap-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/snap-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "translate-interaction",
+              "title": "TranslateInteraction",
+              "subtitle": "",
+              "path": "translate-interaction",
+              "importSpecifier": "nol/translate-interaction",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "interactions",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/interactions/translate-interaction/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            }
+          ]
+        },
+        {
+          "id": "sources",
+          "title": "源",
+          "items": [
+            {
+              "id": "bing-maps-source",
+              "title": "BingMapsSource",
+              "subtitle": "",
+              "path": "bing-maps-source",
+              "importSpecifier": "nol/bing-maps-source",
+              "examples": [
+                "nol-bing-maps-source-bing-maps-example"
+              ],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/bing-maps-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "cartodb-source",
+              "title": "CartoDBSource",
+              "subtitle": "",
+              "path": "cartodb-source",
+              "importSpecifier": "nol/cartodb-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/cartodb-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "cluster-source",
+              "title": "ClusterSource",
+              "subtitle": "",
+              "path": "cluster-source",
+              "importSpecifier": "nol/cluster-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/cluster-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "data-tile-source",
+              "title": "DataTileSource",
+              "subtitle": "",
+              "path": "data-tile-source",
+              "importSpecifier": "nol/data-tile-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/data-tile-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "geotiff-source",
+              "title": "GeoTIFFSource",
+              "subtitle": "",
+              "path": "geotiff-source",
+              "importSpecifier": "nol/geotiff-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/geotiff-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "iiif-source",
+              "title": "IIIFSource",
+              "subtitle": "",
+              "path": "iiif-source",
+              "importSpecifier": "nol/iiif-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/iiif-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "image-arcgis-rest-source",
+              "title": "ImageArcGISRestSource",
+              "subtitle": "",
+              "path": "image-arcgis-rest-source",
+              "importSpecifier": "nol/image-arcgis-rest-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/image-arcgis-rest-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "image-canvas-source",
+              "title": "ImageCanvasSource",
+              "subtitle": "",
+              "path": "image-canvas-source",
+              "importSpecifier": "nol/image-canvas-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/image-canvas-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "image-map-guide-source",
+              "title": "ImageMapGuideSource",
+              "subtitle": "",
+              "path": "image-map-guide-source",
+              "importSpecifier": "nol/image-map-guide-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/image-map-guide-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "image-static-source",
+              "title": "ImageStaticSource",
+              "subtitle": "",
+              "path": "image-static-source",
+              "importSpecifier": "nol/image-static-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/image-static-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "image-wms-source",
+              "title": "ImageWMSSource",
+              "subtitle": "",
+              "path": "image-wms-source",
+              "importSpecifier": "nol/image-wms-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/image-wms-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "osm-source",
+              "title": "OSMSource",
+              "subtitle": "",
+              "path": "osm-source",
+              "importSpecifier": "nol/osm-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/osm-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "raster-source",
+              "title": "RasterSource",
+              "subtitle": "",
+              "path": "raster-source",
+              "importSpecifier": "nol/raster-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/raster-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "stamen-source",
+              "title": "StamenSource",
+              "subtitle": "",
+              "path": "stamen-source",
+              "importSpecifier": "nol/stamen-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/stamen-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "tile-arcgis-rest-source",
+              "title": "TileArcGISRestSource",
+              "subtitle": "",
+              "path": "tile-arcgis-rest-source",
+              "importSpecifier": "nol/tile-arcgis-rest-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/tile-arcgis-rest-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "tile-debug-source",
+              "title": "TileDebugSource",
+              "subtitle": "",
+              "path": "tile-debug-source",
+              "importSpecifier": "nol/tile-debug-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/tile-debug-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "tile-json-source",
+              "title": "TileJSONSource",
+              "subtitle": "",
+              "path": "tile-json-source",
+              "importSpecifier": "nol/tile-json-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/tile-json-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "tile-wms-source",
+              "title": "TileWMSSource",
+              "subtitle": "",
+              "path": "tile-wms-source",
+              "importSpecifier": "nol/tile-wms-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/tile-wms-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "tile-wmts-source",
+              "title": "TileWMTSSource",
+              "subtitle": "",
+              "path": "tile-wmts-source",
+              "importSpecifier": "nol/tile-wmts-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/tile-wmts-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "utf-grid-source",
+              "title": "UTFGridSource",
+              "subtitle": "",
+              "path": "utf-grid-source",
+              "importSpecifier": "nol/utf-grid-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/utf-grid-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "vector-source",
+              "title": "VectorSource",
+              "subtitle": "",
+              "path": "vector-source",
+              "importSpecifier": "nol/vector-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/vector-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "vector-tile-source",
+              "title": "VectorTileSource",
+              "subtitle": "",
+              "path": "vector-tile-source",
+              "importSpecifier": "nol/vector-tile-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/vector-tile-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "xyz-source",
+              "title": "XYZSource",
+              "subtitle": "",
+              "path": "xyz-source",
+              "importSpecifier": "nol/xyz-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/xyz-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "zoomify-source",
+              "title": "ZoomifySource",
+              "subtitle": "",
+              "path": "zoomify-source",
+              "importSpecifier": "nol/zoomify-source",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "sources",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/sources/zoomify-source/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            }
+          ]
+        },
+        {
+          "id": "styles",
+          "title": "样式",
+          "items": [
+            {
+              "id": "circle-style",
+              "title": "CircleStyle",
+              "subtitle": "",
+              "path": "circle-style",
+              "importSpecifier": "nol/circle-style",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "styles",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/styles/circle-style/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "fill-style",
+              "title": "FillStyle",
+              "subtitle": "",
+              "path": "fill-style",
+              "importSpecifier": "nol/fill-style",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "styles",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/styles/fill-style/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "icon-style",
+              "title": "IconStyle",
+              "subtitle": "",
+              "path": "icon-style",
+              "importSpecifier": "nol/icon-style",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "styles",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/styles/icon-style/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "regular-shape-style",
+              "title": "RegularShapeStyle",
+              "subtitle": "",
+              "path": "regular-shape-style",
+              "importSpecifier": "nol/regular-shape-style",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "styles",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/styles/regular-shape-style/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "stroke-style",
+              "title": "StrokeStyle",
+              "subtitle": "",
+              "path": "stroke-style",
+              "importSpecifier": "nol/stroke-style",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "styles",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/styles/stroke-style/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "style",
+              "title": "Style",
+              "subtitle": "",
+              "path": "style",
+              "importSpecifier": "nol/style",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "styles",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/styles/style/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            },
+            {
+              "id": "text-style",
+              "title": "TextStyle",
+              "subtitle": "",
+              "path": "text-style",
+              "importSpecifier": "nol/text-style",
+              "examples": [],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "styles",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/styles/text-style/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            }
+          ]
+        },
+        {
+          "id": "others",
+          "title": "其他组件",
+          "items": [
+            {
+              "id": "overlay",
+              "title": "覆盖",
+              "subtitle": "Overlay",
+              "path": "overlay",
+              "importSpecifier": "nol/overlay",
+              "examples": [
+                "nol-overlay-overlay-example",
+                "nol-overlay-popup-example"
+              ],
+              "overview": true,
+              "api": false,
+              "order": 1,
+              "category": "others",
+              "label": {
+                "text": "New",
+                "color": "#73D897"
+              },
+              "originPath": "src/overlay/docs/zh-cn.md",
+              "toc": "content",
+              "channelPath": "components"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "GitHub",
+      "path": "https://github.com/Jonnytoshen/ngx-ol-library",
+      "isExternal": true
+    }
+  ],
+  "docs": [
+    {
+      "id": "graticule-layer",
+      "title": "标线层",
+      "subtitle": "GraticuleLayer",
+      "path": "graticule-layer",
+      "importSpecifier": "nol/graticule-layer",
+      "examples": [
+        "nol-graticule-layer-map-graticule-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layers",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/layers/graticule-layer/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "heatmap-layer",
+      "title": "热力图",
+      "subtitle": "HeatmapLayer",
+      "path": "heatmap-layer",
+      "importSpecifier": "nol/heatmap-layer",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layers",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/layers/heatmap-layer/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "image-layer",
+      "title": "图像层",
+      "subtitle": "ImageLayer",
+      "path": "image-layer",
+      "importSpecifier": "nol/image-layer",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layers",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/layers/image-layer/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "layer-group",
+      "title": "图层组",
+      "subtitle": "LayerGroup",
+      "path": "layer-group",
+      "importSpecifier": "nol/layer-group",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layers",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/layers/layer-group/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "mapbox-vector-layer",
+      "title": "Mapbox 矢量瓦片层",
+      "subtitle": "MapboxVectorLayer",
+      "path": "mapbox-vector-layer",
+      "importSpecifier": "nol/mapbox-vector-layer",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layers",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/layers/mapbox-vector-layer/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "tile-layer",
+      "title": "瓦片层",
+      "subtitle": "TileLayer",
+      "path": "tile-layer",
+      "importSpecifier": "nol/tile-layer",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layers",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/layers/tile-layer/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "vector-image-layer",
+      "title": "矢量图像层",
+      "subtitle": "VectorImageLayer",
+      "path": "vector-image-layer",
+      "importSpecifier": "nol/vector-image-layer",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layers",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/layers/vector-image-layer/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "vector-layer",
+      "title": "矢量层",
+      "subtitle": "VectorLayer",
+      "path": "vector-layer",
+      "importSpecifier": "nol/vector-layer",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layers",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/layers/vector-layer/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "vector-tile-layer",
+      "title": "矢量瓦片层",
+      "subtitle": "VectorTileLayer",
+      "path": "vector-tile-layer",
+      "importSpecifier": "nol/vector-tile-layer",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layers",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/layers/vector-tile-layer/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "webgl-tile-layer",
+      "title": "WebGL 瓦片层",
+      "subtitle": "WebGLTileLayer",
+      "path": "webgl-tile-layer",
+      "importSpecifier": "nol/webgl-tile-layer",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "layers",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/layers/webgl-tile-layer/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "bing-maps-source",
+      "title": "BingMapsSource",
+      "subtitle": "",
+      "path": "bing-maps-source",
+      "importSpecifier": "nol/bing-maps-source",
+      "examples": [
+        "nol-bing-maps-source-bing-maps-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/bing-maps-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "cartodb-source",
+      "title": "CartoDBSource",
+      "subtitle": "",
+      "path": "cartodb-source",
+      "importSpecifier": "nol/cartodb-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/cartodb-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "cluster-source",
+      "title": "ClusterSource",
+      "subtitle": "",
+      "path": "cluster-source",
+      "importSpecifier": "nol/cluster-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/cluster-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "data-tile-source",
+      "title": "DataTileSource",
+      "subtitle": "",
+      "path": "data-tile-source",
+      "importSpecifier": "nol/data-tile-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/data-tile-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "geotiff-source",
+      "title": "GeoTIFFSource",
+      "subtitle": "",
+      "path": "geotiff-source",
+      "importSpecifier": "nol/geotiff-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/geotiff-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "iiif-source",
+      "title": "IIIFSource",
+      "subtitle": "",
+      "path": "iiif-source",
+      "importSpecifier": "nol/iiif-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/iiif-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "image-arcgis-rest-source",
+      "title": "ImageArcGISRestSource",
+      "subtitle": "",
+      "path": "image-arcgis-rest-source",
+      "importSpecifier": "nol/image-arcgis-rest-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/image-arcgis-rest-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "image-canvas-source",
+      "title": "ImageCanvasSource",
+      "subtitle": "",
+      "path": "image-canvas-source",
+      "importSpecifier": "nol/image-canvas-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/image-canvas-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "image-map-guide-source",
+      "title": "ImageMapGuideSource",
+      "subtitle": "",
+      "path": "image-map-guide-source",
+      "importSpecifier": "nol/image-map-guide-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/image-map-guide-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "image-static-source",
+      "title": "ImageStaticSource",
+      "subtitle": "",
+      "path": "image-static-source",
+      "importSpecifier": "nol/image-static-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/image-static-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "image-wms-source",
+      "title": "ImageWMSSource",
+      "subtitle": "",
+      "path": "image-wms-source",
+      "importSpecifier": "nol/image-wms-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/image-wms-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "osm-source",
+      "title": "OSMSource",
+      "subtitle": "",
+      "path": "osm-source",
+      "importSpecifier": "nol/osm-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/osm-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "raster-source",
+      "title": "RasterSource",
+      "subtitle": "",
+      "path": "raster-source",
+      "importSpecifier": "nol/raster-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/raster-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "stamen-source",
+      "title": "StamenSource",
+      "subtitle": "",
+      "path": "stamen-source",
+      "importSpecifier": "nol/stamen-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/stamen-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "tile-arcgis-rest-source",
+      "title": "TileArcGISRestSource",
+      "subtitle": "",
+      "path": "tile-arcgis-rest-source",
+      "importSpecifier": "nol/tile-arcgis-rest-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/tile-arcgis-rest-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "tile-debug-source",
+      "title": "TileDebugSource",
+      "subtitle": "",
+      "path": "tile-debug-source",
+      "importSpecifier": "nol/tile-debug-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/tile-debug-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "tile-json-source",
+      "title": "TileJSONSource",
+      "subtitle": "",
+      "path": "tile-json-source",
+      "importSpecifier": "nol/tile-json-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/tile-json-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "tile-wms-source",
+      "title": "TileWMSSource",
+      "subtitle": "",
+      "path": "tile-wms-source",
+      "importSpecifier": "nol/tile-wms-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/tile-wms-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "tile-wmts-source",
+      "title": "TileWMTSSource",
+      "subtitle": "",
+      "path": "tile-wmts-source",
+      "importSpecifier": "nol/tile-wmts-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/tile-wmts-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "utf-grid-source",
+      "title": "UTFGridSource",
+      "subtitle": "",
+      "path": "utf-grid-source",
+      "importSpecifier": "nol/utf-grid-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/utf-grid-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "vector-source",
+      "title": "VectorSource",
+      "subtitle": "",
+      "path": "vector-source",
+      "importSpecifier": "nol/vector-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/vector-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "vector-tile-source",
+      "title": "VectorTileSource",
+      "subtitle": "",
+      "path": "vector-tile-source",
+      "importSpecifier": "nol/vector-tile-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/vector-tile-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "xyz-source",
+      "title": "XYZSource",
+      "subtitle": "",
+      "path": "xyz-source",
+      "importSpecifier": "nol/xyz-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/xyz-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "zoomify-source",
+      "title": "ZoomifySource",
+      "subtitle": "",
+      "path": "zoomify-source",
+      "importSpecifier": "nol/zoomify-source",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "sources",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/sources/zoomify-source/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "circle-style",
+      "title": "CircleStyle",
+      "subtitle": "",
+      "path": "circle-style",
+      "importSpecifier": "nol/circle-style",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "styles",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/styles/circle-style/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "fill-style",
+      "title": "FillStyle",
+      "subtitle": "",
+      "path": "fill-style",
+      "importSpecifier": "nol/fill-style",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "styles",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/styles/fill-style/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "icon-style",
+      "title": "IconStyle",
+      "subtitle": "",
+      "path": "icon-style",
+      "importSpecifier": "nol/icon-style",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "styles",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/styles/icon-style/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "regular-shape-style",
+      "title": "RegularShapeStyle",
+      "subtitle": "",
+      "path": "regular-shape-style",
+      "importSpecifier": "nol/regular-shape-style",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "styles",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/styles/regular-shape-style/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "stroke-style",
+      "title": "StrokeStyle",
+      "subtitle": "",
+      "path": "stroke-style",
+      "importSpecifier": "nol/stroke-style",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "styles",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/styles/stroke-style/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "style",
+      "title": "Style",
+      "subtitle": "",
+      "path": "style",
+      "importSpecifier": "nol/style",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "styles",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/styles/style/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "text-style",
+      "title": "TextStyle",
+      "subtitle": "",
+      "path": "text-style",
+      "importSpecifier": "nol/text-style",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "styles",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/styles/text-style/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "double-click-zoom-interaction",
+      "title": "DoubleClickZoomInteraction",
+      "subtitle": "",
+      "path": "double-click-zoom-interaction",
+      "importSpecifier": "nol/double-click-zoom-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/double-click-zoom-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "drag-and-drop-interaction",
+      "title": "DragAndDropInteraction",
+      "subtitle": "",
+      "path": "drag-and-drop-interaction",
+      "importSpecifier": "nol/drag-and-drop-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/drag-and-drop-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "drag-box-interaction",
+      "title": "DragBoxInteraction",
+      "subtitle": "",
+      "path": "drag-box-interaction",
+      "importSpecifier": "nol/drag-box-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/drag-box-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "drag-pan-interaction",
+      "title": "DragPanInteraction",
+      "subtitle": "",
+      "path": "drag-pan-interaction",
+      "importSpecifier": "nol/drag-pan-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/drag-pan-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "drag-rotate-and-zoom-interaction",
+      "title": "DragRotateAndZoomInteraction",
+      "subtitle": "",
+      "path": "drag-rotate-and-zoom-interaction",
+      "importSpecifier": "nol/drag-rotate-and-zoom-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/drag-rotate-and-zoom-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "drag-rotate-interaction",
+      "title": "DragRotateInteraction",
+      "subtitle": "",
+      "path": "drag-rotate-interaction",
+      "importSpecifier": "nol/drag-rotate-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/drag-rotate-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "drag-zoom-interaction",
+      "title": "DragZoomInteraction",
+      "subtitle": "",
+      "path": "drag-zoom-interaction",
+      "importSpecifier": "nol/drag-zoom-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/drag-zoom-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "draw-interaction",
+      "title": "DrawInteraction",
+      "subtitle": "",
+      "path": "draw-interaction",
+      "importSpecifier": "nol/draw-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/draw-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "extent-interaction",
+      "title": "ExtentInteraction",
+      "subtitle": "",
+      "path": "extent-interaction",
+      "importSpecifier": "nol/extent-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/extent-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "keyboard-pan-interaction",
+      "title": "KeyboardPanInteraction",
+      "subtitle": "",
+      "path": "keyboard-pan-interaction",
+      "importSpecifier": "nol/keyboard-pan-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/keyboard-pan-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "keyboard-zoom-interaction",
+      "title": "KeyboardZoomInteraction",
+      "subtitle": "",
+      "path": "keyboard-zoom-interaction",
+      "importSpecifier": "nol/keyboard-zoom-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/keyboard-zoom-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "link-interaction",
+      "title": "LinkInteraction",
+      "subtitle": "",
+      "path": "link-interaction",
+      "importSpecifier": "nol/link-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/link-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "modify-interaction",
+      "title": "ModifyInteraction",
+      "subtitle": "",
+      "path": "modify-interaction",
+      "importSpecifier": "nol/modify-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/modify-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "mouse-wheel-zoom-interaction",
+      "title": "MouseWheelZoomInteraction",
+      "subtitle": "",
+      "path": "mouse-wheel-zoom-interaction",
+      "importSpecifier": "nol/mouse-wheel-zoom-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/mouse-wheel-zoom-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "pinch-rotate-interaction",
+      "title": "PinchRotateInteraction",
+      "subtitle": "",
+      "path": "pinch-rotate-interaction",
+      "importSpecifier": "nol/pinch-rotate-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/pinch-rotate-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "pinch-zoom-interaction",
+      "title": "PinchZoomInteraction",
+      "subtitle": "",
+      "path": "pinch-zoom-interaction",
+      "importSpecifier": "nol/pinch-zoom-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/pinch-zoom-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "select-interaction",
+      "title": "SelectInteraction",
+      "subtitle": "",
+      "path": "select-interaction",
+      "importSpecifier": "nol/select-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/select-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "snap-interaction",
+      "title": "SnapInteraction",
+      "subtitle": "",
+      "path": "snap-interaction",
+      "importSpecifier": "nol/snap-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/snap-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "translate-interaction",
+      "title": "TranslateInteraction",
+      "subtitle": "",
+      "path": "translate-interaction",
+      "importSpecifier": "nol/translate-interaction",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "interactions",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/interactions/translate-interaction/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "attribution-control",
+      "title": "属性",
+      "subtitle": "Attribution",
+      "path": "attribution-control",
+      "importSpecifier": "nol/attribution-control",
+      "examples": [
+        "nol-attribution-control-attributions-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "controls",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/controls/attribution-control/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "full-screen-control",
+      "title": "FullScreenControl",
+      "subtitle": "",
+      "path": "full-screen-control",
+      "importSpecifier": "nol/full-screen-control",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "controls",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/controls/full-screen-control/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "mouse-position-control",
+      "title": "MousePositionControl",
+      "subtitle": "",
+      "path": "mouse-position-control",
+      "importSpecifier": "nol/mouse-position-control",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "controls",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/controls/mouse-position-control/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "overview-map-control",
+      "title": "OverviewMapControl",
+      "subtitle": "",
+      "path": "overview-map-control",
+      "importSpecifier": "nol/overview-map-control",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "controls",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/controls/overview-map-control/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "rotate-control",
+      "title": "RotateControl",
+      "subtitle": "",
+      "path": "rotate-control",
+      "importSpecifier": "nol/rotate-control",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "controls",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/controls/rotate-control/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "scale-line-control",
+      "title": "ScaleLineControl",
+      "subtitle": "",
+      "path": "scale-line-control",
+      "importSpecifier": "nol/scale-line-control",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "controls",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/controls/scale-line-control/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "zoom-control",
+      "title": "ZoomControl",
+      "subtitle": "",
+      "path": "zoom-control",
+      "importSpecifier": "nol/zoom-control",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "controls",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/controls/zoom-control/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "zoom-slider-control",
+      "title": "ZoomSliderControl",
+      "subtitle": "",
+      "path": "zoom-slider-control",
+      "importSpecifier": "nol/zoom-slider-control",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "controls",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/controls/zoom-slider-control/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "zoom-to-extent-control",
+      "title": "ZoomToExtentControl",
+      "subtitle": "",
+      "path": "zoom-to-extent-control",
+      "importSpecifier": "nol/zoom-to-extent-control",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "controls",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/controls/zoom-to-extent-control/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "coordinate",
+      "title": "坐标",
+      "subtitle": "Coordinate",
+      "path": "coordinate",
+      "importSpecifier": "nol/coordinate",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 3,
+      "category": "general",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/coordinate/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "map",
+      "title": "地图",
+      "subtitle": "Map",
+      "path": "map",
+      "importSpecifier": "nol/map",
+      "examples": [
+        "nol-map-accessible-map-example",
+        "nol-map-simple-map-example",
+        "nol-map-map-export-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "general",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/map/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "overlay",
+      "title": "覆盖",
+      "subtitle": "Overlay",
+      "path": "overlay",
+      "importSpecifier": "nol/overlay",
+      "examples": [
+        "nol-overlay-overlay-example",
+        "nol-overlay-popup-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 1,
+      "category": "others",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/overlay/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "proj",
+      "title": "投影",
+      "subtitle": "Projection",
+      "path": "proj",
+      "importSpecifier": "nol/proj",
+      "examples": [],
+      "overview": true,
+      "api": false,
+      "order": 4,
+      "category": "general",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/proj/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    },
+    {
+      "id": "view",
+      "title": "视图",
+      "subtitle": "View",
+      "path": "view",
+      "importSpecifier": "nol/view",
+      "examples": [
+        "nol-view-min-zoom-example"
+      ],
+      "overview": true,
+      "api": false,
+      "order": 2,
+      "category": "general",
+      "label": {
+        "text": "New",
+        "color": "#73D897"
+      },
+      "originPath": "src/view/docs/zh-cn.md",
+      "toc": "content",
+      "channelPath": "components"
+    }
+  ],
+  "homeMeta": {
+    "title": "首页",
+    "order": 10,
+    "hero": {
+      "title": "NGX-OL-LIBRARY",
+      "description": "一个基于 OpenLayers 的 Angular 地图组件库"
+    },
+    "contentPath": "docs/index.html"
+  }
+}

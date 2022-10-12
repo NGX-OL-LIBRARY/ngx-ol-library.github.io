@@ -1,0 +1,25 @@
+
+        <h2 id="definition" class="docs-header-link">
+          <span header-link="definition"></span>
+          Definition
+        </h2>
+      <blockquote>
+<p>A View object represents a simple 2D view of the map. It&#39;s a nol-view component based on <a target="_blank" href="https://openlayers.org/en/latest/apidoc/module-ol_View-View.html">View</a> feature in OpenLayers.</p>
+</blockquote>
+
+        <h2 id="import-module" class="docs-header-link">
+          <span header-link="import-module"></span>
+          Import Module
+        </h2>
+      <pre><code><div>import { NolViewModule } from <span class="token string">'ngx-ol-library/view'</span><span class="token comment" spellcheck="true">;</span></div></code></pre>
+        <h2 id="how-to-use" class="docs-header-link">
+          <span header-link="how-to-use"></span>
+          How To Use
+        </h2>
+      <p>This is the object to act upon to change the center, resolution, and rotation of the map.</p>
+<p>A View has a projection. The projection determines the coordinate system of the center, and its units determine the units of the resolution (projection units per pixel). The default projection is Web Mercator (EPSG:3857).</p>
+<p>The nol-view component needs to be nested within the nol-map component.</p>
+<pre><code><div><span class="token operator">&lt;</span>nol<span class="token operator">-</span>map height<span class="token operator">=</span><span class="token string">"500px"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>nol<span class="token operator">-</span>view <span class="token punctuation">[</span>center<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"[0, 0]"</span> <span class="token punctuation">[</span>zoom<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"5"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>nol<span class="token operator">-</span>view<span class="token operator">></span>
+  <span class="token operator">/</span><span class="token operator">/</span> other components<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>nol<span class="token operator">-</span>map<span class="token operator">></span></div></code></pre>

@@ -1,0 +1,106 @@
+<div><span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@angular/core"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> MapBrowserEvent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"ol"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Coordinate <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"ol/coordinate"</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  selector<span class="token punctuation">:</span> <span class="token string">'nol-popup-example'</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+    &lt;nol-map height="500px" (onSingleclick)="onSingleclickMap($event)">
+      &lt;nol-view [center]="[0, 0]" [zoom]="2">&lt;/nol-view>
+      &lt;nol-tile-layer>
+        &lt;nol-xyz-source [attributions]="attributions" [url]="url" [tileSize]="512">&lt;/nol-xyz-source>
+      &lt;/nol-tile-layer>
+      &lt;!-- Create an overlay to anchor the popup to the map. -->
+      &lt;nol-overlay
+        [autoPan]="{
+          animation: {
+            duration: 250
+          }
+        }"
+        [position]="clickPosition"
+      >
+        &lt;ng-container *nolOverlayContent>
+          &lt;div class="popup">
+            &lt;a class="popup-closer" (click)="closePopup()">✖&lt;/a>
+            &lt;div class="popup-content">
+              &lt;p>You clicked here:&lt;/p>
+              &lt;code *ngIf="clickPosition">{{ clickPosition | nolToStringHDMS }}&lt;/code>
+            &lt;/div>
+          &lt;/div>
+        &lt;/ng-container>
+      &lt;/nol-overlay>
+    &lt;/nol-map>
+  `</span></span><span class="token punctuation">,</span>
+  styles<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token template-string"><span class="token string">`
+    .popup {
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #cccccc;
+      bottom: 12px;
+      left: -50px;
+      min-width: 280px;
+    }
+
+    .popup:before,
+    .popup:after {
+      top: 100%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .popup:before {
+      border-top-color: #cccccc;
+      border-width: 11px;
+      left: 48px;
+      margin-left: -11px;
+    }
+
+    .popup:after {
+      border-top-color: white;
+      border-width: 10px;
+      left: 48px;
+      margin-left: -10px;
+    }
+
+    .popup-closer {
+      text-decoration: none;
+      position: absolute;
+      top: 2px;
+      right: 8px;
+      cursor: pointer;
+    }
+
+    .popup-content > p {
+      margin-bottom: 1rem;
+    }
+
+    .popup-content > code {
+      color: #333333;
+      background-color: #F5F5F5;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-size: .875em;
+    }
+  `</span></span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NolPopupExampleComponent</span> <span class="token punctuation">{</span>
+
+  attributions <span class="token operator">=</span> <span class="token template-string"><span class="token string">`&lt;a href="https://www.maptiler.com/copyright/" target="_blank">&amp;copy; MapTiler&lt;/a> &lt;a href="https://www.openstreetmap.org/copyright" target="_blank">&amp;copy; OpenStreetMap contributors&lt;/a>`</span></span><span class="token punctuation">;</span>
+  url <span class="token operator">=</span> <span class="token string">'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=get_your_own_D6rA4zTHduk6KOKTXzGB'</span><span class="token punctuation">;</span>
+  clickPosition<span class="token operator">?</span><span class="token punctuation">:</span> Coordinate<span class="token punctuation">;</span>
+
+  <span class="token function">onSingleclickMap</span><span class="token punctuation">(</span>event<span class="token punctuation">:</span> MapBrowserEvent<span class="token operator">&lt;</span><span class="token keyword">any</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>clickPosition <span class="token operator">=</span> event<span class="token punctuation">.</span>coordinate<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">closePopup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>clickPosition <span class="token operator">=</span> undefined<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></div>
